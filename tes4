@@ -1,0 +1,16 @@
+
+
+
+# Remove all the containers
+docker rm -f  $(docker ps -a -q)
+
+# Remove all the images
+docker rmi -f $(docker images -q)
+
+# Stop docker daemon
+systemctl stop docker
+
+# Remove directory
+rm -rf /var/lib/docker
+
+
