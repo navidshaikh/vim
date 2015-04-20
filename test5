@@ -1,0 +1,3 @@
+# /etc/sysconfig/docker-storage
+
+DOCKER_STORAGE_OPTIONS= --storage-opt dm.basesize=50G
