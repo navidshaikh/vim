@@ -1,0 +1,3 @@
+# etc/sysconfig/docker-storage
+
+DOCKER_STORAGE_OPTIONS = --storage-opt dm.metadatadev=/dev/mylogvol/my-docker-metadata --storage-opt dm.datadev=/dev/mylogvol/my-docker-data
