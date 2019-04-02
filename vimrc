@@ -1,8 +1,8 @@
 set nocompatible
 set et
 set ai
-set sw=4
-set ts=4
+set sw=2
+set ts=2
 set ruler
 set si
 set nu
@@ -56,10 +56,46 @@ let vala_space_errors = 1
 autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
 
-
-
-" As per Anup blog: http://www.noop.in/2012/05/setting-up-vim-for-rails-development.html
-call pathogen#infect()
-
 " Configuration for indentation plugin of golang
 filetype indent on
+
+
+" Tabs and indentation
+set expandtab                     " Use spaces instead if tabs
+set autoindent                    " Auto indent
+set smartindent                   " Smart indent
+set shiftwidth=2                  " Maintain 2 level indentation
+set tabstop=2                     " 2 level indentation for Tab
+set wrap linebreak textwidth=0    " Wrap lines
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+let g:vim_markdown_folding_disabled = 1
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
