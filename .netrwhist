@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/nshaikh/work/src/ccp-openshift/seed-job'
-let g:netrw_dirhist_2='/home/nshaikh/work/src/ccp-openshift/ccp-openshift-scan'
-let g:netrw_dirhist_3='/home/nshaikh/work/src/ccp-openshift/ccp-openshift-scan/scanning'
-let g:netrw_dirhist_4='/home/nshaikh/work/src/container-pipeline-service/provisions'
-let g:netrw_dirhist_5='/home/nshaikh/work/src/ccp-openshift/daemon-set'
-let g:netrw_dirhist_6='/home/nshaikh/work/src/ccp-openshift/seed-job'
-let g:netrw_dirhist_7='/home/nshaikh/work/src/container-pipeline-service/weekly-scan'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/nshaikh/go/pkg/mod/k8s.io/cli-runtime@v0.0.0-20200209071941-a3380550112a/pkg/resource'
