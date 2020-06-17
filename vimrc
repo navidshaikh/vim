@@ -22,15 +22,11 @@ set textwidth=79
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
-
-
 hi LineTooLong cterm=bold ctermbg=red guibg=LightYellow
-
 
 au FileType make set noet
 
 set pastetoggle=<F3>
-
 
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
